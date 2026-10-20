@@ -35,6 +35,7 @@
   --text: #111a25;
   --text-dim: #475569;
   --text-faint: #5f6c7e;
+  --text-faint-active: var(--text-faint);
   --accent: #047857;
   --accent-hover: #065f46;
   --on-accent: #ffffff;
@@ -91,7 +92,8 @@
     --border-hover: #3a4f68;
     --text: #e6edf5;
     --text-dim: #93a3b8;
-    --text-faint: #6f839f; /* was #5f7088 (3.5:1); lifted to meet AA */
+    --text-faint: #788ca8; /* was #5f7088 (3.5:1); lifted to meet AA on every surface */
+    --text-faint-active: var(--text-dim); /* faint text on the accent-tinted active nav item */
     --accent: #22e3a4;
     --accent-hover: #4cf0ba;
     --on-accent: #04130d;
@@ -144,7 +146,8 @@
   --border-hover: #3a4f68;
   --text: #e6edf5;
   --text-dim: #93a3b8;
-  --text-faint: #6f839f; /* was #5f7088 (3.5:1); lifted to meet AA */
+  --text-faint: #788ca8; /* was #5f7088 (3.5:1); lifted to meet AA on every surface */
+  --text-faint-active: var(--text-dim); /* faint text on the accent-tinted active nav item */
   --accent: #22e3a4;
   --accent-hover: #4cf0ba;
   --on-accent: #04130d;
@@ -327,6 +330,7 @@ a { color: inherit; }
 .nav-text { display: flex; flex-direction: column; min-width: 0; }
 .nav-label { font-weight: 600; font-size: 0.92rem; }
 .nav-blurb { font-size: 0.76rem; color: var(--text-faint); }
+.nav-item.active .nav-blurb { color: var(--text-faint-active); }
 
 .content { display: flex; flex-direction: column; gap: var(--space-4); min-width: 0; }
 
